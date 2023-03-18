@@ -1,0 +1,51 @@
+.chat-head-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:rgb(66, 65, 65);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.chat-head-item:hover {
+    background-color: rgb(16, 123, 230);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.user-profile-pic-text{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.chat-head-item:hover{
+    background-color: rgb(16, 123, 230);
+}
+
+.username{
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media only screen and (max-width:480px){
+    .username{
+        text-overflow: unset;
+        overflow-x: auto;
+    }
+}
+
+.user-profile-pic{
+    width: 25px;
+    height: 25px;
+    background-color: #ccc;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vh;
+    padding: 0.5vh;
+    
+}

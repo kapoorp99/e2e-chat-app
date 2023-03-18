@@ -1,0 +1,52 @@
+.userset, .usernotset
+{
+    display: flex;
+    width: 95%;
+    height: 100%;
+    padding: 0.1rem;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(228, 103, 103);
+    color: white;
+    margin: 0 auto;
+}
+
+.userset .appname,.usernotset .appname
+{
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.userset p,.usernotset
+p
+{
+    font-size: 130%;
+    margin-left: 5%;
+    float: left;
+}
+
+.navbar-user{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: rgb(16, 123, 230);
+    font-weight: bold;
+    color: white;
+    width: 180px;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: silver;
+}
+
+@media only screen and (max-width:480px){
+    .userset{
+        min-width: 1250px;
+    }
+}
