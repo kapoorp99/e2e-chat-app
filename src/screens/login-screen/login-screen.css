@@ -40,15 +40,19 @@
     margin-left: 5%;
     font-size: larger;
     
+    
+    
 }
 
-.button{
+.button-1{
     cursor: pointer;
+    background-color: #e46767 ;
+    border: 2px solid white;
     padding: 4px;
     height: 30px;
     width: 12vw;
     min-width:100px;
-    background-color: rgb(66, 65, 65);
+    outline-color: white !important ;
     color: white;
     font-size: 80%;
     font-weight: bold;
@@ -58,13 +62,39 @@
   
 }
 
-.button:hover{
-    background-color: rgb(228, 103, 103);
+
+.button-2{
+    cursor: pointer;
+    border: 2px solid white;
+  background-color: #e46767;
+    padding: 4px;
+    height: 30px;
+    width: 12vw;
+    min-width:100px;
+    outline-color: white !important ;
+    color: white;
+    font-size: 80%;
+    font-weight: bold;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+  border-top-right-radius: 20px
+  
+}
+.button-1:hover{
+    background-color:#f2b500 ;
     transition: ease-in;
     transition-duration: 180ms;
 }
-button:active {
+
+.button-2:hover{
+    background-color:#f2b500 ;
+    transition: ease-in;
+    transition-duration: 180ms;
+}
+.button-1:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+    
+    
   }
 

@@ -139,8 +139,8 @@ export default function LoginScreen({setUser}) {
         </div>
         
         <div className='buttongrp'>
-        <button className='button' onClick={register}>Register</button>&ensp;
-        <button className='button' onClick={login}>Log in</button>
+        <button className='button-1' onClick={register}>Register</button>&ensp;
+        <button className='button-2' onClick={login}>Log in</button>
         </div>
     </div>
   )
