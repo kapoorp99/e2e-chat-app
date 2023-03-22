@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-
+import { ChevronLeftIcon } from '@heroicons/react/24/solid'
 import { doc, getDoc, updateDoc, setDoc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import "./conversation.css";
@@ -176,6 +176,20 @@ export default function Conversation({ receiver, user }) {
     chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight;
   };
 
+  //to hide the encryption
+var div = document.getElementById('encryption-elements');
+var display = 0;
+function hideShow(){
+ if(display == 1)
+ {
+  div.style.display = 'block';
+  display = 0;
+ }
+ else{
+  div.style.display = 'none'; 
+  display=1;
+ }
+}
   React.useEffect(() => {
     scrollToBottomOfChat();
   },[messages,chatBodyRef]); 
@@ -216,6 +230,9 @@ export default function Conversation({ receiver, user }) {
 
 {receiver ? (
 <div className="encryption-details"> 
+<div className="chev-div" onClick="hideShow()"><ChevronLeftIcon className="chev-icon"/> <p className="encryption-para">Show Encryption</p>
+</div>
+
         <div className='encryption-elements'>
           <form>
             <br/>

@@ -90,12 +90,17 @@
     font-size: 18px;
 }
 
+.encryption-details{
+    
+}
+
 .encryption-elements{
     background-color: rgb(228, 103, 103);
     color: white;
     height: 90vh;
     font-size: 18px;
     overflow: auto;
+    display: none;
 }
 
 form{
@@ -119,6 +124,16 @@ input{
 
 .nochat p{
     font-size: 28px;
+}
+.chev-div{
+    background: rgb(228, 103, 103);
+    display: flex;
+    align-items: center;
+}
+
+.chev-icon{
+    width: 50px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:480px){
