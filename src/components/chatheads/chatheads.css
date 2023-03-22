@@ -5,14 +5,29 @@
     padding: 0.3rem;
     border-radius: 5px;
     cursor: pointer;
-    background-color:rgb(66, 65, 65);
+    background-color:#f2e26f;
     text-overflow: ellipsis;
     overflow: hidden;
+    color: black;
+}
+
+.User-style{
+    padding: 6px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:  #173742;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: white;
 }
 
 .chat-head-item:hover {
-    background-color: rgb(16, 123, 230);
-    transition: background-color 0.2s ease-in-out;
+    background-color:rgb(16, 123, 230);
+    transition:ease-in;
+    transition-duration: 100ms;
 }
 
 .user-profile-pic-text{
@@ -21,10 +36,11 @@
 }
 
 .chat-head-item:hover{
-    background-color: rgb(16, 123, 230);
+    background-color: #f2b500;
 }
 
 .username{
+    padding: 4px;
     font-size: 18px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -34,10 +50,12 @@
     .username{
         text-overflow: unset;
         overflow-x: auto;
+        
     }
 }
 
 .user-profile-pic{
+   
     width: 25px;
     height: 25px;
     background-color: #ccc;

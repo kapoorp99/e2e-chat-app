@@ -1,4 +1,7 @@
 .login-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(66, 65, 65);
     width: 100%;
     height: auto;
@@ -8,29 +11,40 @@
 
 .title{
     padding-top: 3vh;
+    padding-bottom: 4px;
     font-size: 130%;
     text-align: center;
 }
 
 .input{
+    padding-left: 4px;
+    
     text-align: center;
     padding-bottom: 2vh;
 }
 
 .input input{
+    padding: 4px;
     background-color: rgb(162, 162, 162);
     height: 20px;
     min-width: 200px;
     font-size: 90%;
     color: white;
+    outline: none;
+    border: none;
 }
 
 .buttongrp{
+    padding-top: 4px;
     text-align: center;
     margin-left: 5%;
+    font-size: larger;
+    
 }
 
 .button{
+    cursor: pointer;
+    padding: 4px;
     height: 30px;
     width: 12vw;
     min-width:100px;
@@ -38,9 +52,19 @@
     color: white;
     font-size: 80%;
     font-weight: bold;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+  border-top-right-radius: 20px
+  
 }
 
 .button:hover{
     background-color: rgb(228, 103, 103);
+    transition: ease-in;
+    transition-duration: 180ms;
 }
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 

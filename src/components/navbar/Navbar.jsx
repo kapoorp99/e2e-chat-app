@@ -1,6 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
 import "./navbar.css";
+import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/solid'
+import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
 
 export default function Navbar({ user, setUser}) {
 
@@ -20,11 +22,14 @@ const logout = () => {  //Method to log out
         {user ? (
         <div className='navbar-user'>
           <p>{user.email}</p>
-          <button className='logout' onClick={logout}>Log out</button>
+          <button className='logout' onClick={logout}>
+            <ArrowLeftOnRectangleIcon/>
+            Log out</button>
         </div>
          ) : (
         <div className='navbar-content'>
-          <p>Login to use chat app</p>
+         <ArrowRightOnRectangleIcon/>
+          <p>Login</p>
         </div>
          )}
     </div>

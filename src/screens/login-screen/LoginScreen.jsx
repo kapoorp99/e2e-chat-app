@@ -128,7 +128,10 @@ export default function LoginScreen({setUser}) {
         </div>
 
         <div className='mail'>
-            <h3 className='input'>&emsp;&ensp;Email: <input ref={email}/></h3>
+            <h3 className='input'
+            type="text"
+            placeholder="Enter your Email "
+            >&emsp;&ensp;Email: <input ref={email}/></h3>
         </div>
 
         <div className='password'>

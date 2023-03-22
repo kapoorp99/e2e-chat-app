@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { doc, getDoc, updateDoc, setDoc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import "./conversation.css";
-
+import { ArrowSmallRightIcon } from '@heroicons/react/24/solid'
 export default function Conversation({ receiver, user }) {
   const [conversationId, setConversationId] = useState(null); //Initially conversation id is null
   const [messages, setMessages] = useState([]); //Initializing empty array to store messages
@@ -201,7 +201,9 @@ export default function Conversation({ receiver, user }) {
                 <div className="input-message">
                     <br/><input placeholder="Enter message" ref={currentMessage}  onKeyPress={handleEnterKeyPressDown}/>
                 </div>
-            <button onClick={sendMessage} currentMessage="Hello">Go</button>
+            <button onClick={sendMessage} currentMessage="Hello">
+              <ArrowSmallRightIcon/>
+            </button>
           </div>
         </div>
       ) : ( //If no receiver

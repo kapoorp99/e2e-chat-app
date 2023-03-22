@@ -45,6 +45,36 @@ button:hover{
     background-color: silver;
 }
 
+.navbar-content{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40px;
+
+}
+
+.login_icon{
+    cursor: pointer;
+    object-fit: contain;
+    height: 100%;
+    width: 100%; 
+    object-fit: contain;
+   
+}
+
+.logout{
+    object-fit: contain;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+   background-color: #e46767;
+}
+
+
 @media only screen and (max-width:480px){
     .userset{
         min-width: 1250px;
