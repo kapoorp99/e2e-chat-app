@@ -90,7 +90,7 @@ export default function Conversation({ receiver, user }) {
         setdhgenerator(dhgen);
     }
 
-    const pubkeyRef = doc(db,"users",user.uid); //Getting the sender's private and public key from the users collection in firebase
+    const pubkeyRef = doc(db,"",user.uid); //Getting the sender's private and public key from the  collection in firebase
     const docSnap1 = await getDoc(pubkeyRef);
 
     if(docSnap1.exists()) {
@@ -101,7 +101,7 @@ export default function Conversation({ receiver, user }) {
       setsenderpub(senderpub);
     }
 
-    const privkeyRef = doc(db,"users",receiver.uid);  ////Getting the receiver's public key from the users collection in firebase
+    const privkeyRef = doc(db,"",receiver.uid);  ////Getting the receiver's public key from the  collection in firebase
     const docSnap2 = await getDoc(privkeyRef);
 
     if(docSnap2.exists()) {
@@ -230,8 +230,8 @@ function hideShow(){
 
 {receiver ? (
 <div className="encryption-details"> 
-<div className="chev-div" onClick="hideShow()"><ChevronLeftIcon className="chev-icon"/> <p className="encryption-para">Show Encryption</p>
-</div>
+{/* <div className="chev-div" onClick="hideShow()"><ChevronLeftIcon className="chev-icon"/> <p className="encryption-para">Show Encryption</p>
+</div> */}
 
         <div className='encryption-elements'>
           <form>

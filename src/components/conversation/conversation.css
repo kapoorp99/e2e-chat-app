@@ -100,7 +100,7 @@
     height: 90vh;
     font-size: 18px;
     overflow: auto;
-    display: none;
+    display: block;
 }
 
 form{
