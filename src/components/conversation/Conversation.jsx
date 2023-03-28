@@ -1,10 +1,27 @@
 import React, { useRef, useState } from "react";
-import { ChevronLeftIcon } from '@heroicons/react/24/solid'
+import { ChevronUpDownIcon } from '@heroicons/react/24/solid'
 import { doc, getDoc, updateDoc, setDoc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import "./conversation.css";
 import { ArrowSmallRightIcon } from '@heroicons/react/24/solid'
+
+
+  
+
 export default function Conversation({ receiver, user }) {
+
+
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ toggle shown state
+    setIsShown(current => !current);
+
+    // 👇️ or simply set it to true
+    // setIsShown(true);
+  };
+
+
   const [conversationId, setConversationId] = useState(null); //Initially conversation id is null
   const [messages, setMessages] = useState([]); //Initializing empty array to store messages
   var [lastmessageencrypted,setlastmessageencrypted] = useState("");  //To handle encryption and decryption process
@@ -230,12 +247,14 @@ function hideShow(){
 
 {receiver ? (
 <div className="encryption-details"> 
-{/* <div className="chev-div" onClick="hideShow()"><ChevronLeftIcon className="chev-icon"/> <p className="encryption-para">Show Encryption</p>
-</div> */}
+ <button className="chev-button"  onClick={handleClick}>Show Encryption </button>
+
 
         <div className='encryption-elements'>
+        {isShown && 
           <form>
             <br/>
+            
             Diffie Hellman Prime:<br /> <input value={dhprime} readonly="readonly" ></input><br/><br/>
 
             Diffie Hellman Generator:<br /> <input value={dhgenerator} readonly></input><br/><br/>
@@ -253,9 +272,11 @@ function hideShow(){
             Incoming message is :<br /> <input value={lastmessageencrypted} readonly="readonly" onChange={(e2) => lastmessageencrypted(e2.target.value)} /><br/><br/>
 
             Message decrypted as:<br /> <input value={lastmessagedecrypted} readonly="readonly" onChange={(e3) => lastmessagedecrypted(e3.target.value)} /><br/><br/>
+
             </form>
-          
+            }
         </div>
+
       </div>
 ):(
   <div></div>

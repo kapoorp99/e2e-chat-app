@@ -91,8 +91,8 @@
 }
 
 .encryption-details{
-    
-}
+   color: rgb(228, 103, 103)
+};
 
 .encryption-elements{
     background-color: rgb(228, 103, 103);
@@ -101,6 +101,13 @@
     font-size: 18px;
     overflow: auto;
     display: block;
+    border: 2px solid white;
+    padding: 4px;
+    
+}
+
+.encryption-details{
+    color: rgb(228, 103, 103);
 }
 
 form{
@@ -125,10 +132,14 @@ input{
 .nochat p{
     font-size: 28px;
 }
-.chev-div{
+.chev-button{
+    display: flex;
+    align-items:center ;
     background: rgb(228, 103, 103);
     display: flex;
     align-items: center;
+    cursor: pointer;
+    border: 2px solid white;
 }
 
 .chev-icon{
