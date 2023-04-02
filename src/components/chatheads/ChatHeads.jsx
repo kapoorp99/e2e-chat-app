@@ -11,7 +11,7 @@ export default function ChatHeads({items, setreceiver}) {
                 <div className='user-profile-pic'>
                     <p className='user-profile-pic-text'>{obj.email[0]}</p>
                 </div>
-                <p className='username' title={obj.email}>{obj.email.slice(0, 7)}</p>
+                <p className='username' title={obj.email}>{obj.email.split("@")[0]}</p>
             </div>
         ))}
     </div>

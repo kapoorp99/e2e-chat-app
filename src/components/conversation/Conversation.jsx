@@ -231,7 +231,7 @@ export default function Conversation({ receiver, user }) {
             <div className="input-message">
               <br /><input placeholder="Enter message" ref={currentMessage} onKeyPress={handleEnterKeyPressDown} />
             </div>
-            <button onClick={sendMessage} currentMessage="Hello">
+            <button className="sendButton" onClick={sendMessage} currentMessage="Hello">
               <ArrowSmallRightIcon />
             </button>
           </div>

@@ -72,7 +72,7 @@
 
 .chatscreen{
     width: 100%;
-    background-color: rgb(16, 123, 230);
+    background-color: rgb(228, 103, 103);
     color: white;
 }
 
@@ -81,7 +81,7 @@
     height: 90vh;
     margin-top: auto;
     float: left;
-    background-color:rgb(66, 65, 65);
+    background-color:#f2b668;
     overflow: auto;
 }
 
@@ -103,11 +103,15 @@
     display: block;
     border: 2px solid white;
     padding: 4px;
+
     
 }
 
 .encryption-details{
-    color: rgb(228, 103, 103);
+    color: white;
+    text-decoration: white;
+    display: flex;
+    flex-direction: column;
 }
 
 form{
@@ -140,11 +144,16 @@ input{
     align-items: center;
     cursor: pointer;
     border: 2px solid white;
+    
 }
 
 .chev-icon{
     width: 50px;
     cursor: pointer;
+}
+
+.sendButton{
+    background-color: #173742;
 }
 
 @media only screen and (max-width:480px){
